@@ -1,0 +1,8 @@
+receita principal() {
+  ingred passos = 0;
+  mexerEnquanto (forno_temp > 0) {
+    passos = passos + 1;
+  }
+  servir(passos);
+  finalizar 0;
+}

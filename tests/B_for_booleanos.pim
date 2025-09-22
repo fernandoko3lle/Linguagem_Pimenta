@@ -1,0 +1,9 @@
+receita principal() {
+  ingred soma = 0;
+  assarPor (ingred i = 0; i < 10; i = i + 1) {
+    soma = soma + i;
+  }
+  cond ok = (soma >= 45) && (soma <= 55);
+  provar (ok) { servir(1); } senao { servir(0); }
+  finalizar;
+}

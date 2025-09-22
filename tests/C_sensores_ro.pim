@@ -1,0 +1,5 @@
+receita principal() {
+  ingred limite = 180;
+  provar (forno_temp > limite) { servir(1); } senao { servir(0); }
+  finalizar 0;
+}
