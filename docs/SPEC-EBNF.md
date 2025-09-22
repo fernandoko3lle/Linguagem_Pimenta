@@ -57,20 +57,6 @@
 
 ---
 
-## 4. Pipeline (do código Pimenta até a execução)
-
-```mermaid
-flowchart LR
-  A[.pim: Código Pimenta] --> B[Flex: Lexer<br/>Tabela de Tokens]
-  B --> C[Bison: Parser<br/>AST válida]
-  C --> D[Gerador de Código<br/>(C/C++)]
-  D --> E[.bcar: Assembly BotCarVM]
-  E --> F[Emulador BotCarVM<br/>(C/C++)]
-  F --> G[Saída: servir/PRINT]
-```
-
----
-
 ## 5. Gramática (EBNF)
 
 ```ebnf
@@ -85,7 +71,8 @@ identifier     = letter , { alnum } ;
 int_lit        = digit , { digit } ;
 bool_lit       = "true" | "false" ;
 
-ws             = { " " | "	" | "" | "
+ws             = { " " | "	" | "
+" | "
 " } ;
 comment_line   = "//" , { ? any char except newline ? } , ( "
 " | EOF ) ;
